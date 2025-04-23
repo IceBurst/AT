@@ -1029,10 +1029,10 @@ public enum OpCode {
 	 * <p>
 	 * Throws a subclass of <code>ExecutionException</code> on error, e.g. <code>InvalidAddressException</code>.
 	 * 
-	 * @param state
-	 * @param args
+	 * @param state Machine state to work against
+	 * @param args list of arg style objects
 	 * 
-	 * @throws ExecutionException
+	 * @throws ExecutionException from internal function this.executeWithParams
 	 */
 	protected abstract void executeWithParams(MachineState state, Object... args) throws ExecutionException;
 
@@ -1097,10 +1097,10 @@ public enum OpCode {
 	/**
 	 * Returns string representing disassembled OpCode and parameters
 	 * 
-	 * @param codeByteBuffer
-	 * @param dataByteBuffer
-	 * @return String
-	 * @throws ExecutionException
+	 * @param codeByteBuffer OpCode
+	 * @param dataByteBuffer Params for OpCode
+	 * @return String Easily readable export of OpCode and Params
+	 * @throws ExecutionException Because it might go boom
 	 */
 	public String disassemble(ByteBuffer codeByteBuffer, ByteBuffer dataByteBuffer) throws ExecutionException {
 		StringBuilder output = new StringBuilder(this.name());

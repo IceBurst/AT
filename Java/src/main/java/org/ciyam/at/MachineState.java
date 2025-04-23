@@ -647,7 +647,9 @@ public class MachineState {
 		extractMisc(byteBuffer, state);
 	}
 
-	/** For restoring only flags from a previously serialized machine state */
+	/** For restoring only flags from a previously serialized machine state
+	 * @return Current machine state
+	 * */
 	public static MachineState flagsOnlyfromBytes(byte[] stateBytes) {
 		ByteBuffer byteBuffer = ByteBuffer.wrap(stateBytes);
 
@@ -714,7 +716,10 @@ public class MachineState {
 		}
 	}
 
-	/** Returns data bytes from saved state to allow external analysis, e.g. confirming expected payouts, etc. */
+	/** <p>Returns data bytes from saved state to allow external analysis, e.g. confirming expected payouts, etc.
+	 * </p>
+	 * @return Saved State
+	 * */
 	public static byte[] extractDataBytes(byte[] stateBytes) {
 		ByteBuffer byteBuffer = ByteBuffer.wrap(stateBytes);
 
