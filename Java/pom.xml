@@ -4,20 +4,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.ciyam</groupId>
 	<artifactId>AT</artifactId>
-	<version>1.4.2</version>
+	<version>1.4.3</version>
 	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<skipTests>false</skipTests>
 
-		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<maven-source-plugin.version>3.2.0</maven-source-plugin.version>
-		<maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version>
-		<maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
-		<maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+		<maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+		<maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+		<maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
+		<maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
+		<maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
 
-		<bouncycastle.version>1.70</bouncycastle.version>
+		<bouncycastle.version>1.78.1</bouncycastle.version>
+		<junit.version>4.13.2</junit.version>
 	</properties>
 
 	<build>
@@ -110,14 +111,14 @@
 		</dependency>
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
-			<artifactId>bcprov-jdk15on</artifactId>
+			<artifactId>bcprov-jdk18on</artifactId>
 			<version>${bouncycastle.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.13</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
