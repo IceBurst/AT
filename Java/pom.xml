@@ -40,8 +40,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<source>1.11</source>
-					<target>1.11</target>
+					<jdkToolchain>
+						<version>11</version>
+					</jdkToolchain>
 					<release>11</release>
 				</configuration>
 			</plugin>
