@@ -16,7 +16,6 @@
 		<maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
 		<maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
 		<maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
-		<maven-wrapper-plugin.version>3.3.2</maven-wrapper-plugin.version>
 
 		<bouncycastle.version>1.78.1</bouncycastle.version>
 		<junit.version>4.13.2</junit.version>
@@ -26,15 +25,6 @@
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
 		<plugins>
-			<!--
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-wrapper-plugin</artifactId>
-				<version>${maven-wrapper-plugin.version}</version>
-				<configuration>
-					<distributionType>only-script</distributionType>
-				</configuration>
-			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
